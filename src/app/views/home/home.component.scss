@@ -1,0 +1,42 @@
+// Header - ToolBar
+.header {
+  font-family: "Roboto", sans-serif;
+}
+
+.example-icon {
+  padding: 0 14px;
+}
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.table_container {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.table_box {
+  flex: 1;
+  margin: 5%;
+}
+
+.table_container h1 {
+  font-family: "Poppins", sans-serif;
+}
+
+@media (max-width: 1024px) {
+  .table_container {
+    flex-flow: column;
+    margin-top: 20%;
+  }
+
+  .table_box {
+    flex: 1;
+    width: 80%;
+    height: 100px;
+    margin: 10%;
+  }
+}
