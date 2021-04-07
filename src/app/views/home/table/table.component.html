@@ -5,11 +5,20 @@
 
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
-  <!-- Position Column -->
-  <!-- <ng-container matColumnDef="position">
-    <th mat-header-cell *matHeaderCellDef> No. </th>
-    <td mat-cell *matCellDef="let element"> {{element.position}} </td>
-  </ng-container> -->
+ <!-- Checkbox Column -->
+ <ng-container matColumnDef="select">
+  <th mat-header-cell *matHeaderCellDef>
+
+  </th>
+  <td mat-cell *matCellDef="let row">
+    <button class="buttonTable">
+      <mat-icon class="example-icon" aria-hidden="false" aria-label="Example user verified icon">edit_outline</mat-icon>
+    </button>
+    <button class="buttonTable">
+      <mat-icon class="example-icon" aria-hidden="false" aria-label="Example user verified icon">delete_outline</mat-icon>
+    </button>
+  </td>
+</ng-container>
 
   <div *ngFor="let item of resource">
     <ng-container matColumnDef="{{item[0]}}">

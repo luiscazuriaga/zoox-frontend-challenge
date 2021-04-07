@@ -32,7 +32,7 @@ export class TableComponent {
     this[`${this.infoBy}Service`].get().subscribe(data => {
       this.dataSource = new MatTableDataSource(data.resource)
       this.resource = Object.entries(data.resource[0]).filter(item => ["_id","nome","estadoId","abreviacao"].includes(item[0]))//
-      this.displayedColumns = this.resource.map(item => item[0])
+      this.displayedColumns = [...this.resource.map(item => item[0]), "select"]
     })
   }
 
