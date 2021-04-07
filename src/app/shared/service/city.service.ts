@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import CityResponse, { City } from '../interfaces/City';
+import CityResponse, { City } from '../interfaces/cityInterface';
 import BaseService from './baseService';
 
 @Injectable({

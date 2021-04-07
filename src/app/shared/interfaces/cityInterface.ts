@@ -1,4 +1,4 @@
-import BaseResponse from "./BaseResponseInterface"
+import BaseResponse from "./baseResponseInterface"
 
 export interface City{
   nome: string

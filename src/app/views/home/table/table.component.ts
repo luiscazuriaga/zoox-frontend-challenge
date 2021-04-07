@@ -25,15 +25,23 @@ export class TableComponent {
   @Input() infoBy: "city" | "state" | string
 
   ngOnInit():void{
-    this.getCitys();
+    this.getData();
   }
 
-  getCitys():void{
+  getData():void{
     this[`${this.infoBy}Service`].get().subscribe(data => {
       this.dataSource = new MatTableDataSource(data.resource)
       this.resource = Object.entries(data.resource[0]).filter(item => ["_id","nome","estadoId","abreviacao"].includes(item[0]))//
       this.displayedColumns = this.resource.map(item => item[0])
     })
+  }
+
+  updateData(id,data):void{
+    this[`${this.infoBy}Service`].update(id,data).subscribe(data => this.getData())
+  }
+
+  deleteData(id):void{
+    this[`${this.infoBy}Service`].delete(id).subscribe(data => this.getData())
   }
 
   applyFilter(event: Event):void {

@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import StateResponse, { State } from '../interfaces/State';
+import StateResponse, { State } from '../interfaces/stateInterface';
 import BaseService from './baseService';
 
 @Injectable({
