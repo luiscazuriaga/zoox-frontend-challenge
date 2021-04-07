@@ -11,4 +11,10 @@ table {
 .buttonTable {
   border: none;
   margin: 5px;
+  transition: 0.5s;
+}
+
+.buttonTable :hover {
+  transform: scale(1.1);
+  color: rgb(0, 153, 255);
 }
